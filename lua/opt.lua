@@ -33,7 +33,7 @@ vim.opt.signcolumn = 'yes'
 
 --decrease update time and mapped sequence wait time (omg this is pretty cool actually)
 vim.opt.updatetime = 250
-vim.opt.timeoutlen = 300
+vim.opt.timeoutlen = 500
 
 --highlight yanks
 vim.api.nvim_create_autocmd("TextYankPost", {
