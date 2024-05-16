@@ -15,7 +15,6 @@ rt.setup({
 --other languages
 local nvim_lsp = require("lspconfig")
 
---haskell
 nvim_lsp.hls.setup({
 	on_attach = on_attach,
 	settings = {
@@ -26,13 +25,6 @@ nvim_lsp.hls.setup({
 	}
 })
 
---nim
-nvim_lsp.nim_langserver.setup{}
-
---python
-nvim_lsp.pyright.setup{}
-
---lua
 nvim_lsp.lua_ls.setup {
   settings = {
     Lua = {
@@ -43,6 +35,10 @@ nvim_lsp.lua_ls.setup {
     }
   }
 }
+
+nvim_lsp.nim_langserver.setup{}
+nvim_lsp.pyright.setup{}
+nvim_lsp.mojo.setup{}
 
 --clangd (c-families)
 require'lspconfig'.clangd.setup{}

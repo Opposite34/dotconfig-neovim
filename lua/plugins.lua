@@ -15,8 +15,9 @@ require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   use 'simrat39/rust-tools.nvim'
 
-  -- nim syntax highlighting
+  -- syntax highlighting for some languages
   use 'alaviss/nim.nvim'
+  use 'czheo/mojo.vim'
 
 	use {
     'hrsh7th/nvim-cmp',
