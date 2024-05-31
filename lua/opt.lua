@@ -7,17 +7,13 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 --tabstop
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
+-- vim.opt.tabstop = 2
+-- vim.opt.softtabstop = 2
+-- vim.opt.shiftwidth = 2
+-- vim.opt.expandtab = true
 
---for highlight groups (nvim-tree requirements)
-vim.opt.termguicolors = true
-
---clipboards (for wsl-windows interop)
+--clipboards
 vim.opt.clipboard = "unnamedplus"
-
 
 
 --partially copied from nvim-lua/kickstart.nvim
