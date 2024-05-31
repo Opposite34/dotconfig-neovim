@@ -1,5 +1,5 @@
 local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 -- leader
 vim.g.mapleader = " "
@@ -32,7 +32,7 @@ keymap("i", "kj", "<ESC>", opts)
 keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)
 
 -- diagnostic keymaps
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
+keymap('n', '[d', vim.diagnostic.goto_prev, opts)
+keymap('n', ']d', vim.diagnostic.goto_next, opts)
+keymap('n', '<leader>e', vim.diagnostic.open_float, opts)
+keymap('n', '<leader>q', vim.diagnostic.setloclist, opts)
