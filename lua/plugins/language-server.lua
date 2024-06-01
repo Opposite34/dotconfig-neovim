@@ -9,10 +9,12 @@ return {
     config = function()
       require("mason").setup()
       require("mason-lspconfig").setup {
-        ensure_installed = { "lua_ls", "ols" },
+        ensure_installed = { "lua_ls", "pyright", "ols" },
       }
 
-      require("lspconfig").lua_ls.setup {
+      local lsp = require("lspconfig")
+
+      lsp.lua_ls.setup {
         settings = {
           Lua = {
             diagnostics = {
@@ -22,7 +24,8 @@ return {
         }
       }
 
-      require("lspconfig").ols.setup {}
+      lsp.pyright.setup {}
+      lsp.ols.setup {}
     end
   },
 }
