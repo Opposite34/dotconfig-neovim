@@ -65,4 +65,13 @@ return {
       vim.keymap.set("n", "<Esc>", "<cmd>RemoveNotiAndHl<CR>", { noremap=true, silent=true })
     end
   },
+  {
+    'norcalli/nvim-colorizer.lua',
+    config = function()
+      require('colorizer').setup()
+    end
+  },
+  {
+    'HiPhish/rainbow-delimiters.nvim',
+  },
 }
