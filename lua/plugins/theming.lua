@@ -49,7 +49,6 @@ return {
     event = "VeryLazy",
     dependencies = {
       'MunifTanjim/nui.nvim',
-      'rcarriga/nvim-notify',
     },
     config = function ()
       -- copied from official README
