@@ -7,7 +7,7 @@ vim.g.mapleader = " "
 -- Normal Mode
 
 -- terminal
-keymap("n", "<leader>t", ":terminal<return>", opts)
+keymap("n", "<leader>t", ":terminal<return>", opts, "Opens terminal")
 keymap("t", "<Esc><Esc>", "exit<return>", opts)
 
 -- tab stuffs
@@ -29,10 +29,15 @@ keymap("i", "kj", "<ESC>", opts)
 --partially copied from nvim-lua/kickstart.nvim
 
 -- clear highlights with <Esc> in normal mode
-keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)
+keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", opts, "Clear Highlights")
+
+-- LSP keymaps
+keymap('n', 'gD', vim.lsp.buf.declaration, opts, "Go to declaration")
+keymap('n', 'gd', vim.lsp.buf.definition, opts, "Go to definition")
+keymap('n', 'gi', vim.lsp.buf.implementation, opts, "Go to implementation")
 
 -- diagnostic keymaps
-keymap('n', '[d', vim.diagnostic.goto_prev, opts)
-keymap('n', ']d', vim.diagnostic.goto_next, opts)
-keymap('n', '<leader>e', vim.diagnostic.open_float, opts)
-keymap('n', '<leader>q', vim.diagnostic.setloclist, opts)
+keymap('n', '[d', vim.diagnostic.goto_prev, opts, "Go to previous diagnostic")
+keymap('n', ']d', vim.diagnostic.goto_next, opts, "Go to next diagnostic")
+keymap('n', '<leader>e', vim.diagnostic.open_float, opts, "Open diagnostics in a float window")
+keymap('n', '<leader>q', vim.diagnostic.setloclist, opts, "Add diagnostics to location list")
