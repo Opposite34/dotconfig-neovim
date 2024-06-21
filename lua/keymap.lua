@@ -41,12 +41,12 @@ keymap("i", "kj", "<ESC>", opts)
 keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", opts_desc("Clear Highlights"))
 
 -- LSP keymaps
-keymap('n', 'gD', vim.lsp.buf.declaration, opts_desc("Go to declaration"))
-keymap('n', 'gd', vim.lsp.buf.definition, opts_desc("Go to definition"))
-keymap('n', 'gi', vim.lsp.buf.implementation, opts_desc("Go to implementation"))
+keymap("n", "gD", vim.lsp.buf.declaration, opts_desc("Go to declaration"))
+keymap("n", "gd", vim.lsp.buf.definition, opts_desc("Go to definition"))
+keymap("n", "gi", vim.lsp.buf.implementation, opts_desc("Go to implementation"))
 
 -- diagnostic keymaps
-keymap('n', '[d', vim.diagnostic.goto_prev, opts_desc("Go to previous diagnostic"))
-keymap('n', ']d', vim.diagnostic.goto_next, opts_desc("Go to next diagnostic"))
-keymap('n', '<leader>e', vim.diagnostic.open_float, opts_desc("Open diagnostics in a float window"))
-keymap('n', '<leader>q', vim.diagnostic.setloclist, opts_desc("Add diagnostics to location list"))
+keymap("n", "[d", vim.diagnostic.goto_prev, opts_desc("Go to previous diagnostic"))
+keymap("n", "]d", vim.diagnostic.goto_next, opts_desc("Go to next diagnostic"))
+keymap("n", "<leader>e", vim.diagnostic.open_float, opts_desc("Open diagnostics in a float window"))
+keymap("n", "<leader>q", vim.diagnostic.setloclist, opts_desc("Add diagnostics to location list"))

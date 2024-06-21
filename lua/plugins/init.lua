@@ -1,15 +1,9 @@
 return {
   'tpope/vim-sleuth',  --auto tabstop and shiftwidth
   {
-    'm4xshen/autoclose.nvim', --auto closing brackets
+    'm4xshen/autoclose.nvim', --auto closing in insert mode
     config = function()
       require('autoclose').setup()
-    end,
-  },
-  {
-    'echasnovski/mini.ai', --extended "around" and "inside" (dap, cip, etc) functionality
-    config = function()
-      require('mini.ai').setup()
     end,
   },
   {
