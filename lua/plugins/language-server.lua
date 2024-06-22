@@ -26,7 +26,24 @@ return {
 
       lsp.pyright.setup{}
       lsp.ols.setup{}
-      lsp.jdtls.setup{}
+
+      lsp.jdtls.setup({
+        settings = {
+          java = {
+            home = "/usr/lib/jvm/default-runtime",
+            configuration = {
+              runtimes = {
+                {
+                  name = "JavaSE",
+                  path = "/usr/lib/jvm/default-runtime",
+                  default = true,
+                }
+              }
+            }
+          }
+        }
+      })
+
     end
   },
 }

@@ -44,6 +44,8 @@ keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", opts_desc("Clear Highlights"))
 keymap("n", "gD", vim.lsp.buf.declaration, opts_desc("Go to declaration"))
 keymap("n", "gd", vim.lsp.buf.definition, opts_desc("Go to definition"))
 keymap("n", "gi", vim.lsp.buf.implementation, opts_desc("Go to implementation"))
+keymap("n", "ga", vim.lsp.buf.code_action, opts_desc("Code Actions"))
+keymap("n", "<leader>rr", vim.lsp.buf.rename, opts_desc("Rename a variable"))
 
 -- diagnostic keymaps
 keymap("n", "[d", vim.diagnostic.goto_prev, opts_desc("Go to previous diagnostic"))
