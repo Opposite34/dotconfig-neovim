@@ -3,9 +3,38 @@ return {
     'neovim/nvim-lspconfig',
     dependencies = {
       'folke/neodev.nvim', --for helping with configuring neovim
-      'williamboman/mason.nvim', --ease of installing language server
+      {
+        'williamboman/mason.nvim', --ease of installing language server
+        opts = {
+          registries = {
+            'github:nvim-java/mason-registry',
+            'github:mason-org/mason-registry',
+          },
+        },
+      },
       'williamboman/mason-lspconfig.nvim',
+      {
+        'nvim-java/nvim-java',
+        dependencies = {
+          'nvim-java/lua-async-await',
+          'nvim-java/nvim-java-refactor',
+          'nvim-java/nvim-java-core',
+          'nvim-java/nvim-java-test',
+          'nvim-java/nvim-java-dap',
+          'MunifTanjim/nui.nvim',
+          'neovim/nvim-lspconfig',
+          'mfussenegger/nvim-dap',
+        },
+        config = function()
+          require('java').setup({
+            jdk = {
+              auto_install = false,
+            }
+          })
+        end,
+      }
     },
+    --lspconfig's configuration
     config = function()
       require("mason").setup()
       require("mason-lspconfig").setup {
