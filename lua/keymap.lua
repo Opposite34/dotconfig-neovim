@@ -41,6 +41,7 @@ keymap("i", "kj", "<ESC>", opts)
 keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", opts_desc("Clear Highlights"))
 
 -- LSP keymaps
+keymap("n", "K", vim.lsp.buf.hover, opts)
 keymap("n", "gD", vim.lsp.buf.declaration, opts_desc("Go to declaration"))
 keymap("n", "gd", vim.lsp.buf.definition, opts_desc("Go to definition"))
 keymap("n", "gi", vim.lsp.buf.implementation, opts_desc("Go to implementation"))
