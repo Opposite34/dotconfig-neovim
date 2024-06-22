@@ -29,7 +29,6 @@ return {
         mapping = {
           ['<C-j>'] = cmp.mapping.select_next_item { behavior = select_opts },
           ['<C-k>'] = cmp.mapping.select_prev_item { behavior = select_opts },
-          ['<CR>'] = cmp.mapping.confirm({ select='true' }),
           ['<TAB>'] = cmp.mapping.confirm({ select='true' }),
         },
 
