@@ -22,7 +22,7 @@ return {
       end
     end
 
-    vim.keymap.set('n', '<leader>ff', my_find_func, { desc = "Find files" })
+    vim.keymap.set('n', '<leader>ff', my_find_func, { desc = "Find files (git-based context)" })
     vim.keymap.set('n', '<leader>fs', builtin.grep_string, {
       desc = "Find the string under your cursor"
     })
@@ -31,5 +31,10 @@ return {
     })
     vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = "Find files in the buffer" })
     vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = "Find help documentations" })
+
+    vim.keymap.set('n', '<leader>fa',
+    function()
+      builtin.find_files({hidden=true})
+    end, { desc = "Find all files under this dir" })
   end,
 }
