@@ -2,7 +2,13 @@ return {
   {
     'neovim/nvim-lspconfig',
     dependencies = {
-      'folke/neodev.nvim', --for helping with configuring neovim
+      {
+        'folke/lazydev.nvim', --for helping with configuring neovim
+        ft = 'lua',
+        config = function()
+          require('lazydev').setup()
+        end,
+      },
       {
         'williamboman/mason.nvim', --ease of installing language server
         opts = {
@@ -15,6 +21,7 @@ return {
       'williamboman/mason-lspconfig.nvim',
       {
         'nvim-java/nvim-java',
+        ft = 'java',
         dependencies = {
           'nvim-java/lua-async-await',
           'nvim-java/nvim-java-refactor',
