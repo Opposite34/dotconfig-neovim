@@ -82,4 +82,8 @@ return {
 
     end
   },
+  {
+    'sputnick1124/uiua.vim',
+    ft = {"uiua"},
+  },
 }
