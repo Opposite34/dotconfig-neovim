@@ -38,7 +38,7 @@ keymap("i", "kj", "<ESC>", opts)
 --partially copied from nvim-lua/kickstart.nvim
 
 -- clear highlights with <Esc> in normal mode
-keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", opts_desc("Clear Highlights"))
+keymap("n", "<Esc>", vim.cmd("nohlsearch"), opts_desc("Clear Highlights"))
 
 -- LSP keymaps
 keymap("n", "K", vim.lsp.buf.hover, opts)
