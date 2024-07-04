@@ -45,7 +45,7 @@ return {
     config = function()
       require("mason").setup()
       require("mason-lspconfig").setup {
-        ensure_installed = { "lua_ls", "pyright", "ols", "jdtls" },
+        ensure_installed = { "lua_ls", "pyright", "ols", "jdtls", "clangd" },
       }
 
       local lsp = require("lspconfig")
@@ -62,6 +62,7 @@ return {
 
       lsp.pyright.setup{}
       lsp.ols.setup{}
+      lsp.clangd.setup{}
 
       lsp.jdtls.setup({
         settings = {
