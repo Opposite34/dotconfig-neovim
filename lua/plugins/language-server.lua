@@ -22,16 +22,6 @@ return {
       {
         'nvim-java/nvim-java',
         ft = 'java',
-        dependencies = {
-          'nvim-java/lua-async-await',
-          'nvim-java/nvim-java-refactor',
-          'nvim-java/nvim-java-core',
-          'nvim-java/nvim-java-test',
-          'nvim-java/nvim-java-dap',
-          'MunifTanjim/nui.nvim',
-          'neovim/nvim-lspconfig',
-          'mfussenegger/nvim-dap',
-        },
         config = function()
           require('java').setup({
             jdk = {
@@ -39,7 +29,8 @@ return {
             }
           })
         end,
-      }
+      },
+      'alaviss/nim.nvim',
     },
     --lspconfig's configuration
     config = function()
@@ -48,7 +39,7 @@ return {
         ensure_installed = {
           "lua_ls", "pyright",
           "ols", "jdtls", "clangd", "svelte",
-          "nim_langserver"
+          "nim_langserver",
         },
       }
 
