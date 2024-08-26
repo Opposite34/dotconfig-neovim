@@ -11,7 +11,7 @@ return {
       require("mason").setup()
       require("mason-lspconfig").setup {
         ensure_installed = {
-          "lua_ls", "pyright",
+          "lua_ls", "pyright", "gopls",
           "nim_langserver",
         },
       }
@@ -30,6 +30,7 @@ return {
 
       lsp.pyright.setup{}
       lsp.nim_langserver.setup{}
+      lsp.gopls.setup{}
 
     end
   },
