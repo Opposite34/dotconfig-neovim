@@ -13,6 +13,7 @@ return {
         ensure_installed = {
           "lua_ls", "pyright", "gopls",
           "nim_langserver",
+          "matlab_ls",
         },
       }
 
@@ -31,6 +32,18 @@ return {
       lsp.pyright.setup{}
       lsp.nim_langserver.setup{}
       lsp.gopls.setup{}
+      lsp.matlab_ls.setup({
+        filetypes = {"matlab"},
+        settings = {
+          matlab = {
+            indexWorkspace = true,
+            installPath = "~/Apps/MATLAB/R2024b/",
+            matlabConnectionTiming = "onStart",
+            telemetry = false,
+          },
+        },
+        single_file_support = true
+      })
 
     end
   },
