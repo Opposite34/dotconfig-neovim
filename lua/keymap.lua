@@ -53,3 +53,6 @@ keymap("n", "[d", vim.diagnostic.goto_prev, opts_desc("Go to previous diagnostic
 keymap("n", "]d", vim.diagnostic.goto_next, opts_desc("Go to next diagnostic"))
 keymap("n", "<leader>e", vim.diagnostic.open_float, opts_desc("Open diagnostics in a float window"))
 keymap("n", "<leader>q", vim.diagnostic.setloclist, opts_desc("Add diagnostics to location list"))
+
+-- other keymap for markdown notes
+keymap("n", "<leader>bb", "bi**<Esc>ea**<Esc>", opts_desc("Bolds a markdown text"))
