@@ -11,8 +11,8 @@ return {
       require("mason").setup()
       require("mason-lspconfig").setup {
         ensure_installed = {
-          "lua_ls", "pyright", "gopls",
-          "matlab_ls", "ts_ls"
+          "lua_ls", "pyright", "gopls", "ols",
+          "matlab_ls", "ts_ls",
         },
       }
 
@@ -43,6 +43,7 @@ return {
 
       lsp.pyright.setup{}
       lsp.gopls.setup{}
+      lsp.ols.setup{}
       lsp.ts_ls.setup{}
 
     end
