@@ -55,4 +55,4 @@ keymap("n", "<leader>e", vim.diagnostic.open_float, opts_desc("Open diagnostics 
 keymap("n", "<leader>q", vim.diagnostic.setloclist, opts_desc("Add diagnostics to location list"))
 
 -- other keymap for markdown notes
-keymap("n", "<leader>bb", "bi**<Esc>ea**<Esc>", opts_desc("Bolds a markdown text"))
+keymap("n", "<leader>bb", "wbi**<Esc>ea**<Esc>", opts_desc("Bolds a markdown text"))
