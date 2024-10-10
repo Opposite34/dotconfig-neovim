@@ -5,7 +5,7 @@ return {
       ensure_installed = {
         'lua', 'markdown', 'markdown_inline', --necessary parsers for buf.hover()
         'vim', 'regex', 'bash', --necessary parsers for noice
-        'python', 'javascript', 'go', 'matlab', 'odin', --languages
+        'python', 'javascript', 'go', 'matlab', 'odin', 'nim', --languages
       },
     }
   end,
