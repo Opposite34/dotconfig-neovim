@@ -34,7 +34,6 @@ keymap("i", "<C-A>", "<ESC>I", opts)
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
 
-
 --partially copied from nvim-lua/kickstart.nvim
 
 -- clear highlights with <Esc> in normal mode
