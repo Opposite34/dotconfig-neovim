@@ -4,7 +4,6 @@ return {
     require('nvim-treesitter.configs').setup {
       ensure_installed = {
         'lua', 'markdown', 'markdown_inline', --necessary parsers for buf.hover()
-        'vim', 'regex', 'bash', --necessary parsers for noice
         'cpp', 'python', 'odin', 'java', 'nim', --languages
         'svelte', --frameworks and libraries
       },
